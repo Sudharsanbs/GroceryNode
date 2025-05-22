@@ -6,8 +6,10 @@ const errorMessage = require("../../framework/errorControllers/errorMessage.json
 async function create(req) {
   const shopId = await dbService.createId();
   if (req.file) {
-      const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
-       req.body.location = fileUrl;
+    const fileUrl = `${req.protocol}://${req.get("host")}/uploads/${
+      req.file.filename
+    }`;
+    req.body.location = fileUrl;
   }
   const shopDetails = await dbService.create(
     groceryDbDefs.shop,
@@ -18,18 +20,23 @@ async function create(req) {
 }
 
 async function update(req) {
-    const shopDetails= await dbService.findByPk(groceryDbDefs.shop,req.body.shopId);
-    if(!shopDetails){
-        throw new customError(errorMessage.dataNotFound)
-    }
-    console.log( 'req.file' , req.file)
-     if (req.file) {
-      const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
-       req.body.location = fileUrl;
+  const shopDetails = await dbService.findByPk(
+    groceryDbDefs.shop,
+    req.body.shopId
+  );
+  if (!shopDetails) {
+    throw new customError(errorMessage.dataNotFound);
   }
-  console.log( 'body' , req.body)
-  const updateDetails = await dbService.update(shopDetails,req.body);
-  console.log( 'updatedValue' , updateDetails)
+
+  if (req.file) {
+    const fileUrl = `${req.protocol}://${req.get("host")}/uploads/${
+      req.file.filename
+    }`;
+    req.body.location = fileUrl;
+  }
+
+  const updateDetails = await dbService.update(shopDetails, req.body);
+
   return updateDetails;
 }
 

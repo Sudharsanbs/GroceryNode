@@ -2,7 +2,7 @@
 
 # Node.js Authentication and Profile Management Project
 
-This project demonstrates a basic implementation of user authentication (sign-up and sign-in) along with profile editing functionality using Node.js and PostgreSQL.
+This project lets users sign up, log in, and manage their profile. After logging in, users can register their grocery shop by filling in shop details. The backend is built with Node.js and PostgreSQL,
 
 ## Installation
 
@@ -11,7 +11,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/naveda-tech/node-base.git
+   git clone https://github.com/Sudharsanbs/GroceryNode.git
    ```
 
 2. **Install dependencies:**
@@ -32,19 +32,42 @@ To run this project locally, follow these steps:
 
    This command will run database migrations using Knex.js to set up the necessary tables.
 
-5. **Start the application:**
+5. **Create a .env file at the root level of your project (the same level as app.js).**
+
+   - This ensures environment variables are properly loaded when your app runs. Example structure:
+
+       - project-folder/
+         ├── app.js
+         ├── .env
+         ├── package.json
+         └── ...
+    - .env 
+      # Database Configuration
+        DB_HOST="127.0.0.1" 
+        DB_USER="postgres" # your db user name
+        DB_PASSWORD="postgres" # your db password
+        DB_NAME="grocery" # your db name
+        DB_PORT="5432" # your db port 
+        DB_DAILECT="postgres" # your Db DaiLect
+
+      # Multer Upload Path
+        UPLOAD_PATH="C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads" ( # Replace Path of Upload Folder Path (important) eg C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads)
+
+6. **Start the application:**
 
    ```bash
-   npm start
+   npm run start
    ```
 
-   The application should now be running on `http://localhost:3000`.
+   The application should now be running on `http://localhost:3001`.
 
 ## Usage
 
 - **Sign Up:** Register a new user with a unique email address and password.
 - **Sign In:** Log in using your registered email address and password.
 - **Profile Edit:** Update your profile information such as name, email, or password.
+- **Shop :** Creating  your Shop information .
+
 
 ## Directory Structure
 
@@ -68,5 +91,7 @@ Feel free to fork this repository, make pull requests, or open issues for any bu
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
 
 ---

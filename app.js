@@ -10,7 +10,6 @@ const errorController = require('./framework/errorControllers/error.controller')
 //Router
 const authRouter = require('./api/routes/auth-router');
 const profileRouter = require('./api/routes/profile-router');
-const businessRouter = require("./api/routes/business.router")
 const groceryShopReg = require("./api/groceryRoutes/groceryShopReg-router")
 const app = express();
 
@@ -28,7 +27,6 @@ app.use(
 // API Routes
 app.use("/auth", authRouter);
 app.use("/profile", profileRouter);
-app.use("/business",businessRouter)
 app.use("/groceryShopReg",groceryShopReg);
 
 

@@ -1,5 +1,5 @@
-'C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads'
 
+require("dotenv").config();
 const multer = require("multer");
 const path = require("path");
 
@@ -7,7 +7,7 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(
       null,
-      "C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads"
+     process.env.UPLOAD_PATH
     );
   },
   filename: function (req, file, cb) {

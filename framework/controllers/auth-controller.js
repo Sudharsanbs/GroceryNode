@@ -43,6 +43,9 @@ async function createCredentials(req, res) {
 }
 
 async function createProfile(req, credentials) {
+  if (req.body.firstName || req.body.lastName) {
+  req.body.name = `${req.body.firstName || ''} ${req.body.lastName || ''}`.trim();
+}
   let profileData = await dbService.create(
     dbDefs.profile,
     req.body,
