@@ -50,8 +50,10 @@ To run this project locally, follow these steps:
         DB_PORT="5432" # your db port 
         DB_DAILECT="postgres" # your Db DaiLect
 
-      # Multer Upload Path
-        UPLOAD_PATH="C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads" ( # Replace Path of Upload Folder Path (important) eg C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads)
+       # Multer Upload Path (IMPORTANT: Replace with your own local path to the uploads folder)
+         UPLOAD_PATH="C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads"
+         # You can copy this line directly and paste it into your .env file. Just ensure the path exists on your machine. If you're on Windows, the backslashes (\) are not needed in .env files — forward slashes (/) or escaped backslashes (\\) work safely.
+
 
 6. **Start the application:**
 
