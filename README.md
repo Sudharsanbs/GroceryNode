@@ -60,8 +60,9 @@ To run this project locally, follow these steps:
    ```
 
    The application should now be running on `http://localhost:3001`.
-7. ** Post Document Url **
-    url - https://documenter.getpostman.com/view/33841304/2sB2qah1WF
+7. ** Post Document Url:**
+
+      - URL - https://documenter.getpostman.com/view/33841304/2sB2qah1WF
 ## Usage
 
 - **Sign Up:** Register a new user with a unique email address and password.
