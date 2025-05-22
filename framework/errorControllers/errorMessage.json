@@ -1,0 +1,104 @@
+{
+  "AuthenticationFailed": {
+    "message": "invalid session-id",
+    "code": 401
+  },
+  "AdminValidationFailed": {
+    "message": "user is not a admin",
+    "code": 402
+  },
+  "invalidType": {
+    "message": "invalid type",
+    "code": 403
+  },
+
+  "UserAlreadyExist": {
+    "message": "user already exist",
+    "code": 404
+  },
+  "InvalidPhoneNumberOrPassword": {
+    "message": "invalid phone number or password",
+    "code": 405
+  },
+  "InvalidPhoneNumber": {
+    "message": "invalid phone number",
+    "code": 406
+  },
+  "OtpValidationFailed": {
+    "message": "invalid OTP",
+    "code": 407
+  },
+
+  "UserNotFound": {
+    "message": "user not found",
+    "code": 408
+  },
+
+  "ReRequest": {
+    "message": "request has already been sent",
+    "code": 409
+  },
+
+  "ReLike": {
+    "message": "User already liked",
+    "code": 410
+  },
+  "dataNotFound": {
+    "message": "data not found ",
+    "code": 411
+  },
+  "credentialsUpdateError": {
+    "message": "Credentials can't be updated ",
+    "code": 411
+  },
+  "reLoginFailed": {
+    "message": "ReLogin Failed",
+    "code": 412
+  },
+  "invalidRole": {
+    "message": "role is invalid",
+    "code": 413
+  },
+
+  "userIsAdmin": {
+    "message": "User is an admin",
+    "code": 414
+  },
+
+  "noMemberSelected": {
+    "message": "No member selected",
+    "code": 415
+  },
+
+  "notAMember": {
+    "message": "Not a member",
+    "code": 416
+  },
+
+  "invalidPermission": {
+    "message": "Permission is not allowed",
+    "code": 417
+  },
+
+  "userNotAuthorized": {
+    "message": "User is not authorized",
+    "code": 418
+  },
+  "AccessDenied": {
+    "message": "Access Denied ",
+    "code": 419
+  },
+
+  "BusinessURLNotFound": {
+    "message": "Business URL Missing",
+    "code": 420
+  },
+  "APP Not Registered": {
+    "message": "APP not Registered",
+    "code": 421
+  },
+  "deleteUndone": {
+    "message": "Failed to delete the item",
+    "code": 422
+  }
+}
