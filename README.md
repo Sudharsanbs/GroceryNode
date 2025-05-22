@@ -1,101 +1,124 @@
+# 🛒 Grocery Shop Management API
+
+This Node.js project provides a backend system for user authentication, profile management, and grocery shop registration using PostgreSQL.
+
+Users can:
+- Sign up and log in securely
+- Manage their profile
+- Register and manage grocery shop details
+
 ---
 
-# Node.js Authentication and Profile Management Project
+## 🚀 Installation
 
-This project lets users sign up, log in, and manage their profile. After logging in, users can register their grocery shop by filling in shop details. The backend is built with Node.js and PostgreSQL,
+Follow these steps to run the project locally:
 
-## Installation
+### 1. Clone the Repository
 
-To run this project locally, follow these steps:
+```bash
+git clone https://github.com/Sudharsanbs/GroceryNode.git
+cd GroceryNode
+```
 
-1. **Clone the repository:**
+### 2. Install Dependencies
 
-   ```bash
-   git clone https://github.com/Sudharsanbs/GroceryNode.git
-   ```
+```bash
+npm install
+```
 
-2. **Install dependencies:**
+### 3. Set Up PostgreSQL Database
 
-   ```bash
-   npm install
-   ```
+- Make sure PostgreSQL is installed and running.
+- Create a new database, e.g., `grocery`.
 
-3. **Set up PostgreSQL database:**
+### 4. Configure Environment Variables
 
-   - Make sure you have PostgreSQL installed and running.
-   - Create a new database for this project.
+Create a `.env` file at the root level of the project (same level as `app.js`), and paste the following content:
 
-4. **Configure database connection:**
+```env
+# Database Configuration
+DB_HOST="127.0.0.1"
+DB_USER="postgres"            # your DB username
+DB_PASSWORD="postgres"        # your DB password
+DB_NAME="grocery"             # your DB name
+DB_PORT="5432"
+DB_DAILECT="postgres"
 
-   - Navigate to `config/local.config.js`.
-   - Update the PostgreSQL database credentials (`username`, `password`, `database`, `host`, `port`) according to your local setup.
+# Multer Upload Path (IMPORTANT: Replace with your own local path to the uploads folder)
+UPLOAD_PATH="C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads"
+```
 
-   This command will run database migrations using Knex.js to set up the necessary tables.
+📌 **Note:** If you are on Windows, forward slashes `/` or double backslashes `\` are recommended in the path.
 
-5. **Create a .env file at the root level of your project (the same level as app.js).**
+### 5. Run Migrations (If any)
 
-   - This ensures environment variables are properly loaded when your app runs. Example structure:
+If using Knex or similar, run your migration setup (not shown in this repo).
 
-       - project-folder/
-         ├── app.js
-         ├── .env
-         ├── package.json
-         └── ...
-    - .env 
-      # Database Configuration
-        DB_HOST="127.0.0.1" 
-        DB_USER="postgres" # your db user name
-        DB_PASSWORD="postgres" # your db password
-        DB_NAME="grocery" # your db name
-        DB_PORT="5432" # your db port 
-        DB_DAILECT="postgres" # your Db DaiLect
+### 6. Start the Application
 
-       # Multer Upload Path (IMPORTANT: Replace with your own local path to the uploads folder)
-         UPLOAD_PATH="C:/Users/PEPA/Documents/GitHub/Grocery/GroceryNode/uploads"
-         # You can copy this line directly and paste it into your .env file. Just ensure the path exists on your machine. If you're on Windows, the backslashes (\) are not needed in .env files — forward slashes (/) or escaped backslashes (\\) work safely.
+```bash
+npm run dev
+```
 
+Your server will be running on:
 
-6. **Start the application:**
+```
+http://localhost:3001
+```
 
-   ```bash
-   npm run start
-   ```
+---
 
-   The application should now be running on `http://localhost:3001`.
-7. ** Post Document Url:**
+## 📘 API Documentation
 
-      - URL - https://documenter.getpostman.com/view/33841304/2sB2qah1WF
-## Usage
+Access the full API collection here:
 
-- **Sign Up:** Register a new user with a unique email address and password.
-- **Sign In:** Log in using your registered email address and password.
-- **Profile Edit:** Update your profile information such as name, email, or password.
-- **Shop :** Creating  your Shop information .
+📄 [Postman Collection](https://documenter.getpostman.com/view/33841304/2sB2qah1WF)
 
+---
 
-## Directory Structure
+## 🔧 Features
 
-- `config/`: Contains configuration files.
-  - `local.config.js`: Database connection configuration (update credentials here).
-- `dbModels/`: Database related files.
-- `controllers/`: Controllers for handling business logic.
-- `api/routes/`: Express routes for different endpoints.
+- **User Authentication**
+  - Sign Up
+  - Sign In
+- **Profile Management**
+  - Update Name, Email, or Password
+- **Grocery Shop Management**
+  - Add Shop with detailed info (name, contact, address, timings, etc.)
 
+---
 
-## Technologies Used
+## 🗂️ Project Structure
 
-- **Node.js**: JavaScript runtime environment.
-- **Express**: Web application framework for Node.js.
-- **PostgreSQL**: Open source relational database.
+```bash
+GroceryNode/
+├── app.js               # Main server file
+├── .env                 # Environment configuration
+├── package.json         # Node dependencies
+├── config/
+│   └── local.config.js  # DB connection settings
+├── dbModels/            # DB Models (if any)
+├── controllers/         # Business logic handlers
+└── api/routes/          # API routes
+```
 
-## Contributing
+---
 
-Feel free to fork this repository, make pull requests, or open issues for any bugs or feature requests.
+## 🛠️ Built With
 
-## License
+- **Node.js** – Backend runtime
+- **Express.js** – Web framework
+- **PostgreSQL** – Relational database
+- **Multer** – For handling file uploads
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork the repo, submit pull requests, or report issues.
+
+---
+
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
-
----
